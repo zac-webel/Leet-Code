@@ -10,7 +10,7 @@
 # Output: 2
  
 
-# Constraints:
+# Constraints: 
 
 # The number of nodes in the tree is in the range [0, 104].
 # -100 <= Node.val <= 100
@@ -34,5 +34,6 @@ class Solution:
         left = self.maxDepth(root.left)
         right = self.maxDepth(root.right)
 
+        # always take the max height we have seen from this node and below
         return 1 + max(left,right)
         
